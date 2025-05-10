@@ -6,4 +6,4 @@ apt-get install -y openssl unzip curl
 
 rm -rf /var/lib/apt/lists/*
 
-useradd -u kea --uid 1001 --gid 1001 --shell /bin/bash --create-home
+useradd kea -u --uid 1001 --gid 1001 --shell /bin/bash --create-home
