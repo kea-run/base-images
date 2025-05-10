@@ -2,6 +2,7 @@
 
 packages=(
 	ca-certificates
+	pkg-config
 	openssl
 	unzip
 	curl
