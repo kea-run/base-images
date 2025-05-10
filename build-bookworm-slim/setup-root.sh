@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 packages=(
+	ca-certificates
 	openssl
 	unzip
 	curl
