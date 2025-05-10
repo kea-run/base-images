@@ -20,7 +20,7 @@ jobs:
     uses: kea-run/base-images/.github/workflows/build-image.yaml@master
     with:
       dockerhub_username: ${{ vars.DOCKERHUB_USERNAME }}
-      dir: ${{ matrix.image.context }}
+      context: ${{ matrix.image.context }}
       image_name: ${{ matrix.image.name }}
     secrets:
       dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}

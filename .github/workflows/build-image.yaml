@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
   workflow_call:
     inputs:
-      dir:
+      context:
         type: string
         required: true
+      dockerfile:
+        type: string
+        required: false
+        default: Dockerfile
       image_name:
         type: string
         required: true
@@ -62,9 +66,10 @@ jobs:
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6.16.0
-        working-directory: ${{ inputs.context }}
         with:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          context: ${{ inputs.context }}
+          file: ${{ inputs.dockerfile }}
