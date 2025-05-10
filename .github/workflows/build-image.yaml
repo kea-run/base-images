@@ -18,7 +18,7 @@ on:
         required: true
 
 jobs:
-  build-and-push-image:
+  build-and-push-base-image:
     runs-on: ubuntu-latest
     permissions:
       contents: read
