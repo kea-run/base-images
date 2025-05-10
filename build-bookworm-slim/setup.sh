@@ -1,5 +1,6 @@
 apt update
 
-apt-get install -y openssl
+apt-get install -y openssl unzip curl
+curl -fsSL https://bun.sh/install | bash
 
 rm -rf /var/lib/apt/lists/*
