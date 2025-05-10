@@ -4,6 +4,7 @@ packages=(
 	ca-certificates
 	pkg-config
 	openssl
+	libssl-dev
 	unzip
 	curl
 
