@@ -16,6 +16,9 @@ jobs:
         image: 
           - name: build-bookworm-slim
             context: build-bookworm-slim
+        image: 
+          - name: run-chainguard
+            context: run-chainguard
 
     uses: kea-run/base-images/.github/workflows/build-image.yaml@master
     with:
