@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 apt update
-apt-get install -y openssl unzip curl
+apt install -y openssl unzip curl
+apt install -y build-essential
 
 rm -rf /var/lib/apt/lists/*
 
