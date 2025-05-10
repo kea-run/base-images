@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
 
-apt update
-apt install -y openssl unzip curl
-apt install -y build-essential
+packages=(
+	openssl
+	unzip
+	curl
 
+	autoconf
+	automake
+	bison
+	build-essential
+	cmake
+)
+apt update
+apt-get install -y --no-install-recommends "${packages[@]}"
+
+rm -rf /root/*
+rm -rf /tmp/*
+rm -rf /var/cache/apt/archives/*.deb
 rm -rf /var/lib/apt/lists/*
 
 groupadd kea-build --gid 1000
