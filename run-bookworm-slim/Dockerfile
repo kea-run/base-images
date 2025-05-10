@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 
 RUN --mount=target=/build /build/setup.sh
 
-RUN useradd kea --uid 1001 --gid 1001 --shell /bin/bash --create-home
+RUN 
 
 USER kea
 
