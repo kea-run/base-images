@@ -7,10 +7,6 @@ on:
       context:
         type: string
         required: true
-      dockerfile:
-        type: string
-        required: false
-        default: Dockerfile
       image_name:
         type: string
         required: true
@@ -72,4 +68,3 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           context: ${{ inputs.context }}
-          file: ${{ inputs.dockerfile }}
