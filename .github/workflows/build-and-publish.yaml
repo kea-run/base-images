@@ -14,12 +14,14 @@ jobs:
       fail-fast: false
       matrix:
         image: 
-          - context: build-bookworm-slim
-            image_name: build-bookworm-slim
+          - name: build-bookworm-slim
+            context: build-bookworm-slim
+
     uses: kea-run/base-images/.github/workflows/build-image.yaml@master
     with:
       dockerhub_username: ${{ vars.DOCKERHUB_USERNAME }}
       context: ${{ matrix.image.context }}
+      image_name: ${{ matrix.image.image
     secrets:
       dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
 
