@@ -3,6 +3,10 @@ name: Build and publish images
 on:
   push:
     branches: ["master"]
+    paths:
+      - 'build-bookworm-slim/**'
+      - 'run-bookworm-slim/**'
+
   workflow_dispatch:
 
 jobs:
