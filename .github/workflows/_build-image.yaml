@@ -10,10 +10,10 @@ on:
       image_name:
         type: string
         required: true
+    secrets:
       dockerhub_username:
         type: string
         required: true
-    secrets:
       dockerhub_token:
         required: true
 
@@ -42,7 +42,7 @@ jobs:
       - name: Log in to the dockerhub registry
         uses: docker/login-action@v3.4.0
         with:
-          username: ${{ inputs.dockerhub_username}}
+          username: ${{ secrets.dockerhub_username}}
           password: ${{ secrets.dockerhub_token }}
 
       - name: Extract metadata (tags, labels) for Docker
